@@ -1,0 +1,22 @@
+1. Set Up a Google Cloud Project
+
+You’ll need to create a project in Google Cloud to access the Calendar API:
+
+Go to the Google Cloud Console.
+Click "Select a project" > "New Project".
+Name it (e.g., "Local AI Calendar") and click "Create".
+Once created, select the project from the dropdown.
+Navigate to "APIs & Services" > "Library".
+Search for "Google Calendar API", click it, and hit "Enable".
+
+
+2. Create OAuth 2.0 Credentials
+
+To authenticate your AI as a desktop application:
+
+In the Google Cloud Console, go to "APIs & Services" > "Credentials".
+Click "Create Credentials" > "OAuth client ID".
+Select "Desktop app" as the application type.
+Name it (e.g., "AI Calendar Access") and click "Create".
+Download the client_secrets.json file by clicking the download icon next to your new OAuth client ID.
+Save this file securely in your project directory (e.g., C:/my-ai-project/).
