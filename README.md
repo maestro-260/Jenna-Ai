@@ -1,4 +1,4 @@
-# JENNA AI (Just Evolved Neural Network Assistant)
+# JENNA AI (Just an Evolved Neural Network Assistant)
 
 JENNA is a sophisticated AI assistant system built with Python, featuring natural interactions and continuous learning capabilities. The system integrates multiple AI components for cognitive processing, emotional intelligence, and proactive assistance.
 
