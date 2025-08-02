@@ -1,0 +1,11 @@
+ethical_rules:
+  privacy:
+    data_retention_days: 365
+    allowed_usage: [core_operations]
+    blacklist: [ssn, credit_card, password]
+
+safety:
+  max_physical_actions: 5
+  confirmation_required: true
+  max_intensity: 0.7
+  prohibited_content: [hate_speech, violence, self_harm]

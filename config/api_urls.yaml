@@ -1,0 +1,6 @@
+# This file contains the API URLs for various services used in the application.
+# It is recommended to keep this file private and not share it publicly.
+google_calendar:
+  url: "https://www.googleapis.com/auth/calendar"  # Optional, not used directly now
+weather:
+  url: "https://api.weatherapi.com/v1/current.json"

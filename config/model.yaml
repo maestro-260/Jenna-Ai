@@ -1,0 +1,21 @@
+model:
+  active: mistral-custom
+  pending: null
+  parameters:
+    temperature: 0.8
+    top_p: 0.9
+    max_tokens: 2048
+    presence_penalty: 0.6
+    frequency_penalty: 0.6
+    thinking_depth: 3  # Number of thought chain iterations
+  personality:
+    creativity: 0.8
+    analytical_depth: 0.7
+    introspection: 0.9
+versions:
+  - name: mistral-custom
+    created: 2024-02-15
+    user_id: null
+  - name: jenna-ft-default_user-1711929600
+    created: 2025-03-31
+    user_id: default_user

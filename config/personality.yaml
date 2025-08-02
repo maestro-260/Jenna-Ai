@@ -1,0 +1,16 @@
+base_profile: professional
+adaptive_traits:
+  - formal
+  - casual
+  - empathetic
+emotional_responses:
+  happy: upbeat
+  sad: calm
+  angry: assertive
+response_settings:
+  urgency_multiplier: 1.5
+  max_response_length: 500
+personalization:
+  min_interactions: 200
+  training_frequency: daily
+  max_user_models: 10

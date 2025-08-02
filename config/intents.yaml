@@ -1,0 +1,8 @@
+intents:
+  - query
+  - web_search
+  - ecommerce
+  - calculation
+  - navigation
+  - form_fill
+  - system_command

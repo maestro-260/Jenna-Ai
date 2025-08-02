@@ -1,0 +1,14 @@
+authentication:
+  face:
+    model: Facenet512
+    threshold: 0.93
+  voice:
+    model: ECAPA-TDNN
+    threshold: 0.87
+  liveness:
+    required: true
+wake_word:
+  model_path: "models/vosk-model-small-en-us" 
+  phrases: ["hey jenna", "hello jenna", "jenna"]
+  cooldown: 2.0
+  sensitivity: 0.85

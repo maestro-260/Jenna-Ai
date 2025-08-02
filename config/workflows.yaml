@@ -1,0 +1,20 @@
+workflow_definitions:
+  calendar_sync:
+    steps:
+      - name: fetch_events
+        type: api_call
+        action: calendar.list_events
+        parameters:
+          time_min: "{inputs.start_date}"
+          max_results: 10
+      
+      - name: process_events
+        type: data_processing
+        action: merge
+        parameters:
+          source1: "{results.fetch_events}"
+          source2: "{inputs.local_events}"
+    
+    output:
+      events: fetch_events
+      processed: process_events
