@@ -1,0 +1,14 @@
+jobs:
+  deploy-staging:
+    needs: security-scan
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to Kubernetes
+        run: |
+          helm upgrade --install jenna-staging \
+            ./deployment/jenna-helm \
+            --values ./deployment/jenna-helm/values-staging.yaml \
+            --set secrets.porcupineKey="${{ secrets.PORCUPINE_KEY }}" \
+            --set secrets.openvoiceKey="${{ secrets.OPENVOICE_KEY }}"

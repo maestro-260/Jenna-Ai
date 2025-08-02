@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenna-ai
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jenna
+  template:
+    metadata:
+      labels:
+        app: jenna
+    spec:
+      containers:
+      - name: main
+        image: registry.example.com/jenna-ai:latest
+        resources:
+          limits:
+            nvidia.com/gpu: 1  # Allocates 1 GPU
+          requests:
+            nvidia.com/gpu: 1  # Ensures at least 1 GPU is assigned
+        envFrom:
+        - configMapRef:
+            name: jenna-config  # ConfigMap reference
+        - secretRef:
+            name: jenna-secrets  # Secret reference
+      restartPolicy: Always  # Ensures pods restart on failure
+
+---

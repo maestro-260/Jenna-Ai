@@ -1,0 +1,22 @@
+replicaCount: 3
+image:
+  repository: registry.example.com/jenna-ai
+  tag: latest
+  pullPolicy: Always
+
+resources:
+  limits:
+    cpu: 2
+    memory: 4Gi
+    nvidia.com/gpu: 1
+  requests:
+    cpu: 1
+    memory: 2Gi
+    
+env:
+  PORCUPINE_KEY: "{{ .Values.secrets.porcupineKey }}"
+  OPENVOICE_KEY: "{{ .Values.secrets.openvoiceKey }}"
+
+secrets:
+  porcupineKey: "your-porcupine-api-key"
+  openvoiceKey: "your-openvoice-api-key"
